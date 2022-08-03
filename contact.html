@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GCM Tech Solutions</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <!-- Bootstrap 4 CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Bootstrap 4 Files -->
+    <script>
+        if (typeof jQuery == "undefined"){window.$ = window.jQuery = require('jquery');}
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0961d32a8e.js"></script>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+     integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" 
+     crossorigin="anonymous"></script>
+   
+
+    <!--____________________________________google font___________________________________________________________-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    
+
+
+
+</head>
+
+<body>
+
+    <!-- invite -->
+    <div class="modal fade join_meeting_pop invite_to" id="invite_to" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <img src="images/logo.png" /> Invite
+                    </h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="images/x.svg" />
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="join_meting_form">
+                        <h2>Invite to GCM</h2>
+
+                        <form>
+                            <input type="text" id="txt_search" placeholder="Search Contacts by Name or Email">
+                            <div class="card" style="width: 24rem;">
+                                <ul class="list-group" id="searchResult"></ul>
+                            </div>
+
+
+                            <p>If this user accepts your request, your profile information (including your status)
+                                will be visible to this contact. You can also meet and chat with this contact.</p>
+
+                            <div class="modal-footer">
+
+                                <button type="button" class="" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- invite 2-->
+    <div class="modal fade join_meeting_pop invite_to_pop_tw" id="invite_too" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <img src="images/logo.png" /> Invite
+                    </h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="images/x.svg" />
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="join_meting_form invite_to_ok">
+                        <img src="images/send_rqst.svg" />
+                        <form>
+                            <p>
+                                An invitation has been sent successfully !
+                            </p>
+
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="">OK</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid top_bar">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top_bar_lft">
+                    <button type="button" onclick="location.href='dashboard.html';">
+                        <img src="images/arrow-left.svg" />
+                    </button>
+                    <p>Contacts</p>
+                </div>
+
+                <div class="top_bar_ght">
+                    <button><i class="fas fa-cog"></i></button>
+                    <button><img src="images/profile_img_tb.svg" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid lft_panl_high_adst">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="lft_panel-all_ds">
+                    <div class="top_head_hedng">
+                        <h2>My Contacts</h2>
+                        <button type="button" data-toggle="modal" data-target="#invite_to"><img
+                                src="images/+.svg" /></button>
+                    </div>
+                    <div id="contactContainer">
+                        <div id="sentinvitationList" class="my_contct_list">
+                            <h5>Sent Invitations</h5>
+    
+                        </div>
+                        <div id="invitationList" class="my_contct_list">
+                            <h5>Received Invitations</h5>
+    
+                        </div>
+                        <div id="contactList" class="my_contct_list">
+                            <h5>Contacts</h5>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-9  d-none" id="profileDiv">
+                <div class="right_cnt_pnl">
+                    <div  class="top-img_Sec">
+                        <div class="contactr_img">
+                            <img src="images/rohit_im.svg" />
+                        </div>
+
+                        <div class="name_avlbl">
+                            <span class="avlbl">
+                                <span></span>
+                                <p>Available</p>
+                            </span>
+                            <h2 id="contact_full_name"></h2>
+
+                            <span id="chatmeet" class="btns_dv">
+                                <button onclick="openChat()"><i class="fa-solid fa-message"></i> Chat</button>
+                                <button id="call_start" ><i class="fa-solid fa-video"></i> Meet</button>
+                            </span>
+                        </div>
+
+
+                        <div class="personal_info">
+                            <ul class="perso_ul">
+                                <li id="contact_mobile"></li>
+                                <li id="contact_email"></li>
+                            </ul>
+
+
+                            <ul>
+                                <h2>Profile Visiblity</h2>
+                                <li><strong>Status</strong> Visible</li>
+                                <li><strong>Profile information</strong> Visible</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Personal Chat-->
+            <div id="personalChat" class="col-md-9 chat d-none">
+                <div class="card">
+            <div class="card-header msg_head">
+                <div class="id_show d-flex bd-highlight">
+                    <div class="img_cont">
+                        <img src="images/rohit_im.svg" class="img_cont_friend">
+                        <span class="online_icon"></span>
+                        <span class="offline_icon d-none"></span>
+                    </div>
+                    <div class="user_info">
+                        <span id="contactName" class="status">Friend 1</span>
+                    </div>
+                  
+                </div>
+         
+                <div class="d-flex">
+               <div class="video_cam">
+                <span><a href="call_contact.html"><img src="images/video.svg"></a></span>
+                <span><a href="call_contact.html"><img src="images/call.svg"></a></span>
+                </div>
+                <div class="dropdown">
+                      <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> View profile</a>
+                      </div>
+                </div>
+                 </div>
+            </div>
+            <div id="privateMSGContainer" class="card-body msg_card_body">
+               
+            </div>
+            
+            <div class="card-footer">
+                <div class="input-group">
+                    <textarea id="usgMsgtext" name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+                    <div  class="input-group-append attach_btn">
+                        <input type="file" name="avatar" id="fileupload" style="display:none"/>
+                        <span id="uploadbtn" class="input-group-text "><i class="fas fa-paperclip"></i></span>
+                    </div>
+                    <div id="send_btn" class="input-group-append send_btn">
+                        <span  class="input-group-text "><img src="images/send.svg"></span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+         
+            </div>
+    <!-- Personal chat End-->
+</div>
+<!-- Alert call notification-->
+<div class="toast" role="alert" style="position: absolute; bottom:85px; right: 25px;"  data-autohide="false" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="mr-auto text-success">Incoming Call</strong>
+      
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      
+    </div>
+    <div class="toast-footer">
+        <a class="pl-2" href="call_contact.html">Click here to start...</a>
+      </div>
+  </div>
+  <!-- Alert call notification-->
+</div>
+
+
+    <!-- <script src="private_chat_socket.js"></script> -->
+    <script src="contact_script.js"></script>
+    
+
+</body>
+
+</html>

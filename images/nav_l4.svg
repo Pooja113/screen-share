@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="37" viewBox="0 0 39 37">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_182" data-name="Rectangle 182" width="39" height="37" transform="translate(196 404)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_31" data-name="Mask Group 31" transform="translate(-196 -404)" clip-path="url(#clip-path)">
+    <g id="Group_17322" data-name="Group 17322" transform="translate(-1125 256)">
+      <g id="_4781820_avatar_male_man_people_person_icon" data-name="4781820_avatar_male_man_people_person_icon" transform="translate(1326.033 152.384)">
+        <g id="Layer_2" data-name="Layer 2" transform="translate(3.508 3.245)">
+          <path id="Path_4205" data-name="Path 4205" d="M20.222,27.481H7.1a4.1,4.1,0,0,1-4.1-4.1.82.82,0,0,1,.049-.287A10.989,10.989,0,0,1,13.284,16h.754a10.989,10.989,0,0,1,10.235,7.094.82.82,0,0,1,.049.287A4.1,4.1,0,0,1,20.222,27.481ZM4.64,23.52A2.46,2.46,0,0,0,7.1,25.841H20.222a2.46,2.46,0,0,0,2.46-2.321,9.341,9.341,0,0,0-8.644-5.88h-.754A9.341,9.341,0,0,0,4.64,23.52Z" transform="translate(-3 -5.339)" fill="#9b9d9f"/>
+          <path id="Path_4206" data-name="Path 4206" d="M14.921,12.841a4.921,4.921,0,1,1,4.921-4.921A4.921,4.921,0,0,1,14.921,12.841Zm0-8.2a3.28,3.28,0,1,0,3.28,3.28A3.28,3.28,0,0,0,14.921,4.64Z" transform="translate(-4.259 -3)" fill="#9b9d9f"/>
+          <path id="Path_4207" data-name="Path 4207" d="M20.222,27.481H7.1a4.1,4.1,0,0,1-4.1-4.1.82.82,0,0,1,.049-.287A10.989,10.989,0,0,1,13.284,16h.754a10.989,10.989,0,0,1,10.235,7.094.82.82,0,0,1,.049.287A4.1,4.1,0,0,1,20.222,27.481ZM4.64,23.52A2.46,2.46,0,0,0,7.1,25.841H20.222a2.46,2.46,0,0,0,2.46-2.321,9.341,9.341,0,0,0-8.644-5.88h-.754A9.341,9.341,0,0,0,4.64,23.52Z" transform="translate(-3 -5.339)" fill="#9b9d9f"/>
+        </g>
+        <g id="frame" transform="translate(0 0)">
+          <rect id="Rectangle_136" data-name="Rectangle 136" width="28" height="28" transform="translate(-0.033 -0.384)" fill="none"/>
+        </g>
+      </g>
+      <g id="Rectangle_137" data-name="Rectangle 137" transform="translate(1322 148)" fill="none" stroke="#9b9d9f" stroke-width="2">
+        <rect width="37" height="37" rx="10" stroke="none"/>
+        <rect x="1" y="1" width="35" height="35" rx="9" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

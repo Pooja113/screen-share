@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.498" height="37.001" viewBox="0 0 38.498 37.001">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Union_3" data-name="Union 3" d="M1676.845-4963v-11.068a2.69,2.69,0,0,0-.793-1.914,2.692,2.692,0,0,0-1.915-.794h-6.02a2.711,2.711,0,0,0-2.708,2.708V-4963h-7.5a1.916,1.916,0,0,1-1.363-.565,1.915,1.915,0,0,1-.565-1.363v-14.659l-2.716-.018a1.272,1.272,0,0,1-.891-2.171l17.853-17.853a1.271,1.271,0,0,1,1.8,0l18.1,18.1a1.272,1.272,0,0,1-.909,2.171l-2.941-.02v14.454a1.915,1.915,0,0,1-.565,1.363,1.916,1.916,0,0,1-1.363.565Z" transform="translate(-1578.498 5290)" fill="#9b9d9f"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_28" data-name="Mask Group 28" transform="translate(-73.502 -289.999)" clip-path="url(#clip-path)">
+    <path id="Path_4258" data-name="Path 4258" d="M0,0H39V37H0Z" transform="translate(73 290)" fill="#9b9d9f"/>
+  </g>
+</svg>

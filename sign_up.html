@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GCM Tech Solutions</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <!-- Bootstrap 4 CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Bootstrap 4 Files -->
+    <script>
+        if (typeof jQuery == "undefined"){window.$ = window.jQuery = require('jquery');}
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0961d32a8e.js"></script>
+
+
+    <!--____________________________________google font___________________________________________________________-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- custom js -->
+    <script src="sign_up_script.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mx-auto mt-5">
+                <div class="row">
+                    <div class="col-md-6 px-0 login_lft_bx_shd">
+                        <img src="images/login_lft.jpg" class="img-fluid" />
+                    </div>
+
+                    <div class="col-md-6 login_rght_bx_shd">
+                        <div class="login_form_">
+                            <h2>welcome</h2>
+                            <span class="uppr_tab_b2">
+                                <a href="index.html">Sign In</a>
+                                <a href="sign_up.html" class="active">Sign Up</a>
+                            </span>
+                            <form id="registerForm">
+                                <div id="firstForm">
+                                    <label>Full Name</label>
+                                    <input class="required" type="text" id="full_name" placeholder="fullname" />
+                                    <label>Gender</label>
+                                    <select class="required" name="gender" id="gender">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                    <label>Date of Birth</label>
+                                    <input class="required" type="date" id="dob" placeholder="usernsme" />
+                                    <button type="button" id="nextBtn">Next</button>
+                                </div>
+                                <div id="nextForm" class="d-none">
+                                    <label>Mobile Phone No.</label>
+                                    <input class="required" type="number" required pattern="^\d{10}$" id="mobile" placeholder="Mobile" />
+
+                                    <label>Email Address</label>
+                                    <input class="required" type="text" id="email" placeholder="email" />
+
+                                    <label>Password</label>
+                                    <input class="required" type="password" id="password" placeholder="password" />
+
+                                    <label>Confirm-Password</label>
+                                    <input class="required" type="password" id="cnfpassword"
+                                        placeholder="confirm-password" />
+                                    <div id="msgdiv" class="d-none error"></div>
+                                    <button type="button" id="submitBtn">Sign Up</button>
+                                    <button type="button" id="previousBtn">Back</button>
+                                </div>
+
+                                <p>Already Have An Account? <a href="index.html">Sign In</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- custom js -->
+<script src="sign_up_script.js"></script>
+
+
+</body>
+
+</html>

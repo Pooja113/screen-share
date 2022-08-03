@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+   <head>
+        <meta charset="utf-8">
+        <title>GCM Tech Solutions</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="icon" href="images/logo.png" type="image/png">
+        
+        <!-- Bootstrap 4 CDN link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
+        <!-- Bootstrap 4 Files -->
+        <script>
+          if (typeof jQuery == "undefined"){window.$ = window.jQuery = require('jquery');}
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+        
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/0961d32a8e.js" ></script>
+        <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+     integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" 
+     crossorigin="anonymous"></script>
+
+        <!--____________________________________google font___________________________________________________________--> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+       
+   </head>
+
+    <body>
+
+
+        <div class="container-fluid top_bar">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="top_bar_lft">
+                             <button type="button" onclick="location.href='dashboard.html';">
+                                 <img src="images/arrow-left.svg"/>
+                             </button>
+                             <p>Chat</p>
+                          </div>
+
+                          <div class="top_bar_ght">
+                              <button><i class="fas fa-cog"></i></button>
+                              <button><img src="images/profile_img_tb.svg"/></button>
+                          </div>
+                      </div>
+                  </div>
+        </div>
+
+        <div class="container-fluid mt-3">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="self_profile">
+                        <div class="d-flex ">
+                                <div class="img_cont">
+                                    <img src="images/rohit_im.svg" class="rounded-circle user_img">
+                                    <span class="online_icon"></span>
+                                </div>
+                                <div class="user_info">
+                                    <span id="user_fullname" >George Tarielashvili</span>
+                                    <!-- <p id="user_bio" class="mb-0">Senoir Ui/Ux Designer</p> -->
+                                    <select id="onn_off_status">
+                                        <option>Online</option>
+                                        <option>Offline</option>
+                                    </select>
+                                </div>
+                    </div>
+                    <hr>
+                     <!-- Nav tabs -->
+                     <div style="position: relative;">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="chat-tab" data-toggle="tab" href="#GroupChatList" role="tab" aria-controls="chat" aria-selected="true">
+                            <i class="fa-solid fa-comment"></i></a>
+                          </li>
+                        
+                        </ul>
+                        <button class="btn_video_icon btn_add_icon" data-toggle="modal" data-target="#staticBackdrop"><img src="images/add.svg"> New Group</button>
+                    </div>
+                        <div class="tab-content" id="myTabContent">
+                          <div class="tab-pane fade show active" id="GroupChatList" role="tabpanel" aria-labelledby="chat-tab">
+                               
+                               
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9 chat">
+                            <div class="card d-none" id="groupChatDiv">
+                        <div class="card-header msg_head">
+                            <div class="d-flex ">
+                                <div class="img_cont">
+                                    <img src="./images/people.png" class="rounded-circle user_img">
+                                    <span class="online_icon"></span>
+                                </div>
+                                <div class="user_info">
+                                    <span id="groupName"></span>
+                                 
+                                </div>
+                              
+                            </div>
+                     
+                            <div class="d-flex">
+                           <div class="video_cam">
+                                <span id="groupVideoCall"><img src="images/video.svg"></span>
+                                <span id="groupAudioCall"><img src="images/call.svg"></span>
+                            </div>
+                            <div class="dropdown">
+                                  <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <i class="fas fa-ellipsis-v"></i>
+                                  </button>
+                                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item"data-toggle="modal" data-target="#addGroupMember"><i class="fas fa-plus"></i>Add Member</a>
+                                    <a class="dropdown-item" onclick="viewGroupMembers ()" data-target="#viewGroupMember"><i class="fa fa-address-book-o" aria-hidden="true"></i>See Members</a>
+                                  </div>
+                            </div>
+                             </div>
+                        </div>
+                        <div id="grpMsgDiv" class="card-body msg_card_body">
+                       
+                            
+                        </div>
+                        <div class="card-footer">
+                            <div class="input-group">
+                                <textarea id="usgMsgtext" name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+                                <div  class="input-group-append attach_btn">
+                                  <input type="file" name="avatar" id="fileupload" style="display:none"/>
+                                  <span id="uploadbtn" class="input-group-text "><i class="fas fa-paperclip"></i></span>
+                              </div>
+                                <div id="send_btn" class="input-group-append send_btn">
+                                    <span  class="input-group-text "><img src="images/send.svg"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+<!-- Alert call notification-->
+<div class="toast" role="alert" style="position: absolute; bottom:85px; left: 25px;"  data-autohide="false" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="mr-auto text-success">Incoming Call</strong>
+      
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      
+    </div>
+    <div class="toast-footer">
+        <a class="pl-2" href="call_contact.html">Click here to start...</a>
+      </div>
+  </div>
+  <!-- Alert call notification-->
+        </div>
+
+    <!--- create group -->
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Create a New Group</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+                </div>
+                <input type="text"  id="group_name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-Description">Description</span>
+                </div>
+                <input type="text" id="group_description" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-Description">
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="createGroup" type="button" class="btn btn-primary">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- -->
+ <!-- Modal addgroupMemberlist -->
+ <div class="modal fade" id="addGroupMember" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addGroupMemberLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addGroupMemberLabel">Add member</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="addgroupMemberlist" class="modal-body">
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="add_group_member" type="button" class="btn btn-primary">Add Member</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- -->
+
+      <!-- -->
+ <!-- Modal viewGroupMember -->
+ <div class="modal fade" id="viewGroupMember" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="viewGroupMemberLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewGroupMemberLabel">All members</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="" class="modal-body">
+        <table class="table table-bordered table-striped">
+          <thead>
+          <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile</th>
+          </tr>
+          </thead>
+  <tbody id="viewGroupMemberlist">
+  </tbody>
+      </table> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button id="viewGroupMember" type="button" class="btn btn-primary">Add Member</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- -->
+<script src="./group_chat_script.js"></script>
+
+    </body>
+</html>

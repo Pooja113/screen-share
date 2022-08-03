@@ -1,0 +1,1100 @@
+<!doctype html>
+<html>
+   <head>
+        <meta charset="utf-8">
+        <title>GCM Tech Solutions</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="icon" href="images/logo.png" type="image/png">
+        
+        <!-- Bootstrap 4 CDN link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
+        <!-- Bootstrap 4 Files -->
+        <script>
+          if (typeof jQuery == "undefined"){window.$ = window.jQuery = require('jquery');}
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+        
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/0961d32a8e.js" ></script>
+        <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+        integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" 
+        crossorigin="anonymous"></script>
+       
+        <!--____________________________________google font___________________________________________________________--> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+       
+
+    <style>
+      
+    </style>
+    
+   </head>
+
+    <body>
+<!-- Settings-modal  -->
+<div class="modal fade join_meeting_pop" id="settings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog custom_settings_modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <img src="images/logo.png"/> Settings
+        </h5>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <img src="images/x.svg"/>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class=""> 
+              <div class="vertical-tabs">
+                 <div class="row">
+                  <div class="col-4">
+                  <ul class="nav nav-tabs setting-tab" role="tablist">
+                      <!-- <li class="nav-item">
+                          <a class="nav-link active" data-toggle="tab" href="#pag1" role="tab" aria-controls="home"><img src="images/icon_pnl_ico5.svg"> General</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#pag2" role="tab" aria-controls="home"><img src="images/icon_pnl_ico5.svg"> Video</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#pag3" role="tab" aria-controls="home"><img src="images/icon_pnl_ico5.svg"> Audio</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#pag4" role="tab" aria-controls="home"><img src="images/icon_pnl_ico5.svg"> Share Screen</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#pag5" role="tab" aria-controls="home"><img src="images/icon_pnl_ico5.svg"> Chat</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#pag6" role="tab" aria-controls="home"><img src="images/icon_pnl_ico5.svg"> Recording</a>
+                      </li> -->
+                      <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#pag7" role="tab" aria-controls="home"><img src="images/icon_pnl_ico5.svg"> Profile</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-8">
+                  <div class="tab-content">
+                    <div class="tab-pane" id="pag1" role="tabpanel">
+                      <div class="sv-tab-panel">
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Start when I start Windows</label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>abcajhdfj jfshfjh fjshfjsdf sjfhsjfdh jfshdkjf </label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Use dual monitors <img src="images/question-mark.png" class="img_questionmark"></label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Remind me 
+                              <select class="selection_minutes">
+                              <option>5</option>
+                              <option>10</option>   
+                              </select>minutes </label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Remember my name for future Meetings</label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Remember my name for future Meetings</label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Remember my name for future Meetings</label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Remember my name for future Meetings</label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Remember my name for future Meetings</label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Remember my name for future Meetings</label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Remember my name for future Meetings</label>
+                          </span>
+                          <p class="mb-0"><b>Zoom Updates</b></p>
+                          <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label><span>Automatically keep desktop client up to date 
+                              <select class="selection_minutes">
+                              <option>Slow</option>
+                              <option>10</option>   
+                              </select>
+                              <img src="images/question-mark.png" class="img_questionmark"></span>
+                            </label>
+                          </span>
+                          <p class="mb-0"><b>Reaction Skin Tone</b></p>
+                         <button class="btn_skin_reaction_tone"><img src ="images/thumb-up.png"></button>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="pag2" role="tabpanel">
+                      <div class="sv-tab-panel">
+                        <div class="camera_image mb-3">
+                          <img src="https://i.ytimg.com/vi/9kKZXStKbeY/maxresdefault.jpg" class="img-fluid">
+                        </div>
+                        <div>
+                         <p class="mb-0"><b>Camera</b></p>
+                         <span class="hlf_bx">
+                          <select  class="selection_minutes ml-0 mt-1 mb-1">
+                            <option>HP TrueVision HD Camera</option>
+                          </select>
+                          <div>
+                            <span>
+                              <input type="checkbox">
+                              <label>Original Ratio</label>
+                            </span>
+                            <span class="ml-3">
+                              <input type="checkbox">
+                              <label>HD</label>
+                            </span>
+                          </div>
+
+                          <p class="mb-0"><b>My Video</b></p>
+                           <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Mirror my video</label>
+                          </span>
+                          <br>
+                           <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Touch up my appearance</label>
+                          </span>
+                          <br>
+                           <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Adjust for low light</label>
+                          </span>
+                          <br>
+                          <hr>
+                           <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Always display participant names on their video</label>
+                          </span><br>
+                          <button class="btn_advanced_video">Advanced</button>
+                        </div>
+                        <div class="camera_image mb-3 mt-2">
+                          <img src="https://i.ytimg.com/vi/9kKZXStKbeY/maxresdefault.jpg" class="img-fluid">
+                        </div>
+                        <div>
+                           <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Always display participant names on their video</label>
+                          </span>
+                          <br>
+                           <span class="hlf_bx">
+                              <input type="checkbox">
+                              <label>Turn off my video when joining meeting</label>
+                          </span>
+                          <br>
+                          <span>Maximum participants displayed per screen in Gallery View:</span><br>
+                           <p>
+                            <span>
+                            <input type="radio" id="test1" name="radio-group" checked>
+                            <label for="test1">Apple</label>
+                            </span>
+                            <span>
+                            <input type="radio" id="test2" name="radio-group" checked>
+                            <label for="test2">Apple</label>
+                            </span>
+                          </p>
+                          <p>Did not see any video <a href="#">Trouble Shooting</a></p>
+                          <button class="btn_advanced_video">Advanced</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="pag3" role="tabpanel">
+                      <div class="sv-tab-panel">
+                        <div class="schedule_popup">
+                          <p class="mb-2"><b>Speaker</b></p>
+                         <div class="">
+                          <button class="btn_advanced_video">Test Speaker</button>
+                           <select class="selection_minutes ml-0 mt-1 mb-1 pl-0 pr-0">
+                             <option>Speacker (RealTek High Defination Audio (SST))</option>
+                           </select>
+                         </div>
+                           <div class="d-flex mt-2 mb-1">
+                           <label>Output Level:</label>
+                           <div class="progress custom_progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemax="100"></div>
+                          </div>
+                         </div>
+
+                         <div class="">
+                          <label>Volume:</label>
+                          <span><i class="fa-solid fa-volume-off"></i></span>
+                          <span> <input type="range" min="1" max="10" value="5" id="myNumber" class="volume_bar"></span>
+                          <span><i class="fa-solid fa-volume-high"></i></span>
+                          <span>
+                            <input type="checkbox">
+                            <label>Use separate audio device to play ringtone simultaneously</label>
+                          </span>
+                        </div>
+
+                        <p class="mb-2"><b>Microphone</b></p>
+                         <div class="">
+                          <button class="btn_advanced_video">Test Mic</button>
+                           <select class="selection_minutes ml-0 mt-1 mb-1 pl-0 pr-0">
+                             <option>Speacker (RealTek High Defination Audio (SST))</option>
+                           </select>
+                         </div>
+                         <div class="d-flex mt-2 mb-1">
+                           <label>Output Level:</label>
+                           <div class="progress custom_progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemax="100"></div>
+                          </div>
+                         </div>
+                         <div class="">
+                          <label>Volume:</label>
+                          <span><i class="fa-solid fa-volume-off"></i></span>
+                          <span> <input type="range" min="1" max="10" value="5" id="myNumber" class="volume_bar"></span>
+                          <span><i class="fa-solid fa-volume-high"></i></span>
+                          <span>
+                            <input type="checkbox">
+                            <label>Automatically adjust microphone volume</label>
+                          </span>
+                        </div>
+
+                        
+                        <div class="radio_btn">
+                          <p class="mb-2"><b>Suppress background noise <a href="#"> Learn more</a></b></p>
+                          <p class="mb-1"> 
+                            <input type="radio" id="test4" name="radio-group" checked="">
+                            <label for="test4">Auto</label>
+                          </p>
+                          <p class="mb-1"> 
+                            <input type="radio" id="test4" name="radio-group" checked="">
+                            <label for="test4">Low (faint background noise)</label>
+                          </p>
+                          <p class="mb-1"> 
+                            <input type="radio" id="test4" name="radio-group" checked="">
+                            <label for="test4">Medium (computer fan, pen taps)</label>
+                          </p>
+                          <p class="mb-1"> 
+                            <input type="radio" id="test4" name="radio-group" checked="">
+                            <label for="test4">High (type, dog barks)</label>
+                          </p>
+                        </div>
+                        
+                        <div class="radio_btn">
+                          <p class="mb-2"><b>Music and Professional Audio</b></p>
+                          <span>
+                            <input type="checkbox">
+                            <label>Show in-meeting option to enable "Original Sound"</label><img src="images/question-mark.png" class="img_questionmark">
+                          </span>
+                          <hr>
+                          <div class="">
+                            <label>Ringtone:</label>
+                            <select class="selection_minutes ml-0 mt-1 mb-1">
+                              <option>Default</option>
+                            </select>
+                            <img src="images/question-mark.png" class="img_questionmark">
+                          </div>
+                        </div>
+                        <div class="">
+                          <span>
+                            <input type="checkbox">
+                            <label>Automatically adjust microphone volume</label>
+                          </span>
+                          <span>
+                            <input type="checkbox">
+                            <label>Automatically adjust microphone volume</label>
+                          </span>
+                          <span>
+                            <input type="checkbox">
+                            <label>Automatically adjust microphone volume</label>
+                          </span>
+                          <span>
+                            <input type="checkbox">
+                            <label>Automatically adjust microphone volume</label>
+                          </span>
+                          
+                        </div>
+                        <div>
+                          <button class="btn_advanced_video">Advanced</button>
+                        </div>
+                        
+
+
+                      
+
+                       </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="pag4" role="tabpanel">
+                      <div class="sv-tab-panel">
+                        <div class="">
+                          <p>Window size when screen sharing:</p>
+                          <div class="d-flex justify-content-between">
+                            <span>
+                              <input type="radio" id="test10" name="radio-group" checked="">
+                              <label for="test10">Fullscreen mode</label>
+                            </span>
+
+                             <span>
+                              <input type="radio" id="test11" name="radio-group" checked="">
+                              <label for="test11">Maximize </label>
+                            </span>
+                             <span>
+                              <input type="radio" id="test12" name="radio-group" checked="">
+                              <label for="test12">Maintain current size</label>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div>
+                          <span>
+                            <input type="checkbox">
+                            <label>Scale to fit shared content to Zoom window</label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Enable the remote control of all applications</label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Side-by-side mode</label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Silence system notifications when sharing desktop</label>
+                          </span>
+                        </div>
+
+                          <div class="radio_btn">
+                            <p><b>Share applications</b></p>
+                            <p class="mb-1"> 
+                              <input type="radio" id="test4" name="radio-group" checked="">
+                              <label for="test4">Share individual window</label>
+                            </p>
+                            <p class="mb-1"> 
+                              <input type="radio" id="test4" name="radio-group" checked="">
+                              <label for="test4">Share all window from an application</label>
+                            </p>
+                          </div>
+
+                          <div class="radio_btn">
+                            <p><b>When I share directly in a screen</b></p>
+                            <p class="mb-1"> 
+                              <input type="radio" id="test4" name="radio-group" checked="">
+                              <label for="test4">Automatically  share desktop <img src="images/question-mark.png" class="img_questionmark"></label>
+                            </p>
+                            <p class="mb-1"> 
+                              <input type="radio" id="test4" name="radio-group" checked="">
+                              <label for="test4">Show all sharing options</label>
+                            </p>
+                          </div>
+
+                          <div class="radio_btn">
+                            <p><b>When I share directly to a Zoom Room</b></p>
+                            <p class="mb-1"> 
+                              <input type="radio" id="test4" name="radio-group" checked="">
+                              <label for="test4">Automatically  share desktop <img src="images/question-mark.png" class="img_questionmark"></label>
+                            </p>
+                            <p class="mb-1"> 
+                              <input type="radio" id="test4" name="radio-group" checked="">
+                              <label for="test4">Show all sharing options</label>
+                            </p>
+                          </div>
+                          <div>
+                            <button class="btn_advanced_video">Advanced</button>
+                          </div>
+                        
+                      </div>
+                    </div>
+            
+                    <div class="tab-pane" id="pag5" role="tabpanel">
+                      <div class="sv-tab-panel">
+                        <div>
+                          <p><b>Chat Settings</b></p>
+                          <span>
+                            <input type="checkbox">
+                            <label>Show Record button</label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Show Code Snippet button</label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Show link preview</label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Show Profile Photo next to Direct Messages</label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Show Profile Photo next to Direct Messages</label>
+                          </span>
+                          <br>
+                          <span class="hlf_bx">
+                            <input type="checkbox">
+                            <label>Change my to "Away" when I am inactive
+                            <select class="selection_minutes">
+                            <option>5</option>
+                            <option>10</option>   
+                            </select>minutes </label>
+                        </span>
+                        <br>
+                        <div class="">
+                          <label>Blocked users</label>
+                          <button class="btn_advanced_video">Manage Blocked Users...</button>
+                        </div>
+                        <div>
+                          <p><b>Unread Messages</b></p>
+                          <span>
+                            <input type="checkbox">
+                            <label>Keep all unread messages on top in chat and channel lists</label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Show unread message badge (1 ) for channels</label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Move message with new replies to the bottom of the chat</label>
+                          </span>
+                          <p>When viewing unread messages in a channel:</p>
+                          <div class="radio_btn">
+                            <p class="mb-1"> 
+                              <input type="radio" id="test4" name="radio-group" checked="">
+                              <label for="test4">Start at the first unread</label>
+                            </p>
+                            <p class="mb-1"> 
+                              <input type="radio" id="test4" name="radio-group" checked="">
+                              <label for="test4">Start at the latest</label>
+                            </p>
+                          </div>
+                          <div>
+                            <p><b>Push notifications</b></p>
+                            <div class="radio_btn">
+                              <p class="mb-1"> 
+                                <input type="radio" id="test4" name="radio-group" checked="">
+                                <label for="test4">All messages</label>
+                              </p>
+                              <p class="mb-1"> 
+                                <input type="radio" id="test4" name="radio-group" checked="">
+                                <label for="test4">Only private messages and mentions</label>
+                              </p>
+                              <p class="mb-1"> 
+                                <input type="radio" id="test4" name="radio-group" checked="">
+                                <label for="test4">Nothing</label>
+                              </p>
+                              <div class="">
+                                <label>with exception for</label>
+                                <select class="selection_minutes ml-0 mt-1 mb-1">
+                                  <option>Channels..</option>
+                                </select>
+                                <hr>
+                                <label>Receive notifications for</label>
+                                <select class="selection_minutes ml-0 mt-1 mb-1">
+                                  <option>Keyword</option>
+                                </select>
+                                <br>
+                                <span>
+                                  <input type="checkbox">
+                                  <label>Notify me about when new replies on messages I am following</label>
+                                </span>
+                                <br>
+                                <div>
+                                  <span>
+                                    <input type="checkbox">
+                                    <label>No not disturb form:</label>
+                                      <select class="selection_minutes ml-0 mt-1 mb-1">
+                                        <option>10:00 AM</option>
+                                      </select>
+                                      To
+                                      <select class="selection_minutes ml-0 mt-1 mb-1">
+                                        <option>12:00 PM</option>
+                                      </select>
+                                  </span>
+                                </div>
+                                <span>
+                                  <input type="checkbox">
+                                  <label>Play sound when I receive a new message </label>
+                                </span>
+                                <br>
+                                <span>
+                                  <input type="checkbox">
+                                  <label>Receive notifications for</label>
+                                </span>
+                                <br>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="tab-pane" id="pag6" role="tabpanel">
+                      <div class="sv-tab-panel">
+                        <div>
+                          <p class="mb-0"><b>Local Recording</b></p>
+                          <p>
+                            <span>Store my recording at:</span>
+                            <span><label for="file-upload" class="mb-0">
+                              <span id="filename">Select your file</span>
+                              <input type="file" id="file-upload"></label>
+                            </span> 
+                            <button class="btn-open">Open</button>
+                            <button class="btn-open">Change</button>
+                          </p>
+                          <p>17 GB remaining</p>
+
+                          <span>
+                            <input type="checkbox">
+                            <label>Choose a location for recording file when the meeting ends </label>
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Record a separate audio file of  each participant</label><img src="images/question-mark.png" class="img_questionmark">
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Optimize for 3rd party video editor</label><img src="images/question-mark.png" class="img_questionmark">
+                          </span>
+                          <br>
+                          <span>
+                            <input type="checkbox">
+                            <label>Keep temporary recoding file</label>
+                          </span>
+
+
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="tab-pane active" id="pag7" role="tabpanel">
+                      <div class="sv-tab-panel">
+                        <div class="text-center">
+                          <div class="profile_img mb-3"> <img src="images/profile_img_tb.svg" ></div>
+                         <span class="profile_name">George Tarielashvili</span><span class="active_dot"></span>
+                         <!-- <p class="mt-3">
+                          <span class="">Gmail Account</span><span class="profile_edit"><i class="fa-solid fa-pencil"></i> Edit</span>
+                         </p> -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+              </div>
+           </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- join meeting --> 
+<div class="modal fade join_meeting_pop" id="Schedule_Meeting_data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <img src="images/logo.png"/> Schedule Meeting
+        </h5>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <img src="images/x.svg"/>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="join_meting_form"> 
+              <p><b>Your meeting has beeen scheduled</b></p>
+              <p>Click the button below to copy the invition to clipboard</p>
+            <div class="outer_line-popup">
+              <p> kartik kalyan is inviting you to a scheduled Zoom meeting.</p>
+            <br>
+            <p>Topic: Regarding project</p>
+            <p>Time: Feb 22.2022 07:00 PM India</p>
+            <br>
+            <p>Join Zoom Meeting</p>
+            <p>https://www.google.com/</p>
+            <p>pwd=c29YNFJDGFHGJHJDFKJHSDJHDS#766969?</p>
+            <br>
+            <p>Meeting ID: 86868378678</p>
+            <p>Passcode: fnY41M</p>
+            
+            
+            </div>
+                  <div class="modal-footer schedule_meeting_footer-btn">
+                      <button type="button" class="" >Copy to Clipboard</button>
+                      <button type="button" class="" >Open with default calendar (.ics)</button>
+                  </div>
+           </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- end -->
+
+<!-- Schedule meeting --> 
+<div class="modal fade join_meeting_pop" id="schedule_meeting_pop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <img src="images/logo.png"/> Schedule Meeting
+          </h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img src="images/x.svg"/>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="join_meting_form pt-0 pb-0"> 
+                <h2 class="pb-0">Schedule Meeting</h2>
+              </div>
+
+             
+           
+                          <div class="schedule_popup">
+                           <p class="mb-2"><b>Topic</b></p>
+                           <span class="hlf_bx">
+                            <input type="text" placeholder="" class="text_input mb-2">
+                          </span>
+                          <div class="">
+                            <label>Start:</label>
+                            <select  class="selection_minutes ml-0 mt-1 mb-1">
+                              <option>Wed Febraury 23,2022</option>
+                            </select>
+                            <select  class="selection_minutes ml-0 mt-1 mb-1">
+                              <option>11:00AM</option>
+                            </select>
+                          </div>
+                            <div class="">
+                            <label>Duration:</label>
+                          
+                            <select  class="selection_minutes ml-0 mt-1 mb-1">
+                              <option>0 hours</option>
+                            </select>
+                            <select  class="selection_minutes ml-0 mt-1 mb-1">
+                              <option>30min</option>
+                            </select>
+                          
+                         
+                          </div>
+                        
+                            <div class="d-flex justify-content-between mt-3">
+                              <span>
+                                <input type="checkbox">
+                                <label>Recurring Meeting</label>
+                              </span>
+                              <span class="ml-3 text-left">
+                              <select  class="selection_minutes ml-0 mt-1 mb-1">
+                              <option>TimeZone : India</option>
+                            </select>
+                              </span>
+                            </div>
+                            <hr>
+                            
+
+                              <p class="mb-2"><b>Meeting ID</b></p>
+
+                              <div class="d-flex justify-content-between">
+                              <span>
+                              <input type="radio" id="test4" name="radio-group" checked>
+                              <label for="test4">Generate Automatically</label>
+                              </span>
+                              <span>
+                              <input type="radio" id="test5" name="radio-group" checked>
+                              <label for="test5">Personal Meeting ID 914 065 6039</label>
+                              </span>
+                            </div>
+                            <hr>
+
+                             <p class="mb-2"><b>Security</b></p>
+                             <span>
+                              <span>
+                                <input type="checkbox">
+                                <label>Passcode</label>
+                              </span>
+                              <input type="text" placeholder="" class="input_passcode">
+                              <img src="images/question-mark.png" class="img_questionmark">
+                              <p class="small_text">Only users who have the invite link or passcode can join the meeting</p>
+                            </span> 
+
+                             <span>
+                              <span>
+                                <input type="checkbox">
+                                <label>Waiting Room</label>
+                              </span>
+                              <p class="small_text">Only users admitted by the host can join the meeting</p>
+                            </span> 
+                            <hr>
+
+
+                              <p class="mb-2"><b>Video</b></p>
+
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <label>Host:</label>
+                                  <span>
+                                  <input type="radio" id="test6" name="radio-group" checked>
+                                  <label for="test6">On</label>
+                                  </span>
+                                  <span>
+                                  <input type="radio" id="test7" name="radio-group" checked>
+                                  <label for="test7">Off</label>
+                                  </span>
+                                </div>
+                                <div>
+                                  <label>Participants:</label>
+                                  <span>
+                                  <input type="radio" id="test8" name="radio-group" checked>
+                                  <label for="test8">On</label>
+                                  </span>
+                                  <span>
+                                  <input type="radio" id="test9" name="radio-group" checked>
+                                  <label for="test9">Off</label>
+                                  </span>
+                                </div>
+
+                            </div>
+                            <hr>
+                               <p class="mb-2"><b>Calender</b></p>
+                               <div class="d-flex justify-content-between">
+                                <span>
+                                  <input type="radio" id="test10" name="radio-group" checked>
+                                  <label for="test10">Outlook</label>
+                                </span>
+
+                                 <span>
+                                  <input type="radio" id="test11" name="radio-group" checked>
+                                  <label for="test11">General Calender</label>
+                                </span>
+                                 <span>
+                                  <input type="radio" id="test12" name="radio-group" checked>
+                                  <label for="test12">Other Calender</label>
+                                </span>
+                              </div>
+
+                            <hr>
+
+                            <div>
+                      <div id="main">
+                        <div class="container">
+                        <div class="accordion" id="faq">
+                                            <div class="card">
+                                                <div class="card-header" id="faqhead1">
+                                                    <a href="#" class="btn btn-header-link pl-0" data-toggle="collapse" data-target="#faq1"
+                                                    aria-expanded="true" aria-controls="faq1">Advanced Options</a>
+                                                </div>
+
+                                                <div id="faq1" class="collapse" aria-labelledby="faqhead1" data-parent="#faq">
+                                                    <div class="card-body pl-0">
+                                                        <span>
+                                                          <input type="checkbox">
+                                                          <label>Recurring Meeting</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                            </div>
+
+                            <div class="text-center">
+                              <button class="btn_schedule_meeting">Save</button>
+                              <button class="btn_schedule_meeting btn_cancel_meeting ml-3">Cancel</button>
+                            </div>
+                        </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+<!-- join meeting --> 
+<div class="modal fade join_meeting_pop" id="join_meeting" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <img src="images/logo.png"/> Join Meeting
+          </h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img src="images/x.svg"/>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="join_meting_form"> 
+                <h2>Join Meeting</h2>
+
+                <form>
+                    <input type="text" placeholder="Meeting ID or Personal Link Name">
+                    <input type="text" placeholder="Enter your name">
+                    <span class="hlf_bx">
+                        <input type="checkbox">
+                        <label>Remember my name for future Meetings</label>
+                    </span>
+
+                    <span class="hlf_bx">
+                        <input type="checkbox">
+                        <label>Don't connect to audio</label>
+                    </span>
+
+                    <span class="hlf_bx">
+                        <input type="checkbox">
+                        <label>Turn off my video</label>
+                    </span>
+
+                   
+                    <p>By clicking "join", you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Statement </a></p>
+                
+                    <div class="modal-footer">
+                        <button type="button" class="" data-toggle="modal" data-target="#join_meetingg" data-dismiss="modal">Join</button>
+                        <button type="button" class="" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+             </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+<!-- join meeting_ --> 
+<div class="modal fade join_meeting_pop" id="join_meetingg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <img src="images/logo.png"/> Enter meeting password
+          </h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img src="images/x.svg"/>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="join_meting_form"> 
+                <h2>Enter meeting password</h2>
+
+                <form>
+                    <input type="text" placeholder="Meeting Password">
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="" >Join Meeting</button>
+                        <button type="button" class="" data-dismiss="modal">Cancel</button>
+                      </div>
+                </form>
+             </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+       
+
+        <div class="container-fluid top_bar">
+          <span class="top_bar_dash" style="float: right;">
+            <button data-toggle="modal" data-target="#settings"><i class="fas fa-cog"></i></button>
+            <button class="pro_btn_drp"><img src="images/profile_img_tb.svg" class="dropbtnn" onclick="myFunctionmenu()"/></button>
+          </span>
+        	      <div class="row">
+                      <div class="col-md-12">
+                          <div class="top_bar_ght dropdownn" >
+                              <div id="myDropdownn" class="dropdown-contentt">
+                                    <span class="arrow_up_notch">
+                                        <h2 id="dashUsername">George Tarielashvili</h2>
+                                        <p id="dashUserEmail">kalyankartik21@gmail.com</p>
+                                        <span><img src="images/emoji.svg"/> <input type="text" value="Set what you're up to"/></span>
+                                    </span>
+                                    <a href="#"><i class="fas fa-cog" ></i> Settings</a>
+                                    <span class="status_showbtn">
+                                        <button><img src="images/online.svg"/> Available</button>
+                                        <button><img src="images/away.svg"/> Away</button>
+                                        <button><img src="images/disturb.svg"/> Do not disturb</button>
+                                    </span>
+                                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                                    
+                                    <span id="logoutBtn" class="logout_btn_btm">
+                                        <button>Sign Out</button>
+                                    </span>
+                              </div>
+                          </div>
+                      </div>
+        	      </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="top_nav">
+                        <a href="#" class="active"><img src="images/nav_l1_.svg"/><br>Home</a>
+                        <a href="chat.html"><img src="images/nav_l2.svg"/><br>Chat</a>
+                        <a href="meetings.html"><img src="images/nav_l3.svg"/><br>Meetings</a>
+                        <a href="contact.html"><img src="images/nav_l4.svg"/><br>Contacts</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="top_nav d-none">
+                         <span class="search_bar_tp">
+                             <input type="text" placeholder="Search..."/><img src="images/search.svg"/>
+                         </span>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="dash_icon_pnl">
+                        <a href="remote_access.html"><img src="images/icon_pnl_ico8.svg"/><br>Remote Access</a>
+                        <!-- <a href="videocall.html"><img src="images/icon_pnl_ico1.svg"/><br>Video calling</a>
+                        <a href="#"><img src="images/icon_pnl_ico4.svg"/><br>Audio calling</a> -->
+                        <a href="chat.html"><img src="images/icon_pnl_ico6.svg"/><br>Text Chat</a>
+                        <!-- <a href="#" data-toggle="modal" data-target="#schedule_meeting_pop"><img src="images/icon_pnl_ico7.svg"/><br>Schedule</a> -->
+                        <!-- <a href="#" data-toggle="modal" data-target="#Schedule_Meeting_data"><img src="images/icon_pnl_ico2.svg"/><br>File Sharing</a> -->
+                        <!-- <a href="#" data-toggle="modal" data-target="#join_meeting"><img src="images/icon_pnl_ico3.svg"/><br>Join Meeting</a>
+                        <a href="video_recordings.html"><img src="images/icon_pnl_ico5.svg"/><br>Video Recording</a> -->
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="right_calendar">
+                        <div class="calendar_bg">
+                            <h2 id="timeCurrent"></h2>
+                            <p id="dateCurrent"></p>
+                        </div>
+
+                        <div class="meeting_dis_aria">
+                             <div class="meting_one">
+                               <h2>Video Chat (ZP pro project) </h2>
+                               <a href="#">Start</a>
+                               <p>2:00 PM - 3:00 PM | Meeting ID : 287-878-321</p>
+                             </div>
+                        </div>
+
+                        <a href="meetings.html" class="btm_an_tg">View today upcoming meetings (1)</a>
+                    </div>
+                </div>
+            </div>
+                   <!-- Alert call notification-->
+<div class="toast" role="alert" style="position: absolute; bottom:95px; right: 28px;"  data-autohide="false" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <strong class="mr-auto text-success">Incoming Call</strong>
+    
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    
+  </div>
+  <div class="toast-footer">
+    <a class="pl-2" href="call_contact">Click here to start...</a>
+  </div>
+</div>
+<!-- Alert call notification-->
+        </div>
+        
+ 
+<script src="user_socket_common.js"></script>
+        
+<script>
+  $('#file-upload').change(function() {
+    var filepath = this.value;
+    var m = filepath.match(/([^\/\\]+)$/);
+    var filename = m[1];
+    $('#filename').html(filename);
+
+});
+</script>
+<!--_________________________________profile_drp_______________________________________-->  
+<!--_________________________________profile_drp________________________________________-->    
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunctionmenu() {
+            document.getElementById("myDropdownn").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+            if (!event.target.matches('.dropbtnn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-contentt");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+                }
+            }
+            }
+        </script>    
+<!--_________________________________profile_drp_______________________________________-->  
+<!--_________________________________profile_drp________________________________________--> 
+
+<script>
+  $(function () {
+    var userData= JSON.parse(localStorage.getItem('userData'));
+    $("#dashUsername").text(userData.full_name);
+    $('.profile_name').text(userData.full_name);
+    $("#dashUserEmail").text(userData.email);
+  });
+  $("#logoutBtn").click(function (e) { 
+    e.preventDefault();
+    localStorage.clear();
+    window.location = "index.html";
+  });
+  var d = new Date();
+  let timeCurrent= d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+  let dateCurrent=d.toDateString();
+  $("#timeCurrent").text(timeCurrent);
+  $("#dateCurrent").text(dateCurrent);
+</script>
+
+
+    </body>
+</html>

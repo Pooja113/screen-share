@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="114" viewBox="0 0 116 114">
+  <g id="Group_17175" data-name="Group 17175" transform="translate(-0.237 -0.063)">
+    <g id="Group_17147" data-name="Group 17147" transform="translate(0 0)">
+      <path id="Path_4208" data-name="Path 4208" d="M37,0H79a37,37,0,0,1,37,37V77a37,37,0,0,1-37,37H37A37,37,0,0,1,0,77V37A37,37,0,0,1,37,0Z" transform="translate(0.237 0.063)" fill="#0f44a9"/>
+    </g>
+    <g id="Group_17149" data-name="Group 17149" transform="translate(22.237 36.063)">
+      <g id="_003-video-camera-1" data-name="003-video-camera-1" transform="translate(0 0)">
+        <g id="Group_2611" data-name="Group 2611" transform="translate(0 0)">
+          <g id="Group_2610" data-name="Group 2610">
+            <path id="Path_1360" data-name="Path 1360" d="M40.905,96.512H7.912A7.935,7.935,0,0,0,0,104.424v26.663A7.935,7.935,0,0,0,7.912,139H40.905a7.935,7.935,0,0,0,7.912-7.912V104.424A7.885,7.885,0,0,0,40.905,96.512Z" transform="translate(0 -96.512)" fill="#fff"/>
+          </g>
+        </g>
+        <g id="Group_2613" data-name="Group 2613" transform="translate(52.773 4.224)">
+          <g id="Group_2612" data-name="Group 2612" transform="translate(0 0)">
+            <path id="Path_1361" data-name="Path 1361" d="M355.192,123.975a4.028,4.028,0,0,0-1.345.554L341.5,131.649v18.356l12.422,7.121a4.7,4.7,0,0,0,6.488-1.741,4.835,4.835,0,0,0,.633-2.374V128.564A4.762,4.762,0,0,0,355.192,123.975Z" transform="translate(-341.504 -123.847)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_17150" data-name="Group 17150" transform="translate(34.284 44.472)">
+      <line id="Line_78" data-name="Line 78" x1="26" transform="translate(-0.547 13.091)" fill="none" stroke="#0f42a8" stroke-width="4"/>
+      <path id="Path_4190" data-name="Path 4190" d="M25.839,0H0" transform="translate(12.453 0.091) rotate(90)" fill="none" stroke="#0f42a8" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

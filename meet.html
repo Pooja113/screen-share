@@ -1,0 +1,19 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src='https://8x8.vc/external_api.js' async></script>
+        <style>html, body, #video-call { height: 100%; }</style>
+        <script type="text/javascript">
+          window.onload = () => {
+            const api = new JitsiMeetExternalAPI("8x8.vc", {
+              roomName: "Gcm Tech",
+              parentNode: document.querySelector('#video-call')
+            });
+          }
+        </script>
+      </head>
+      <body
+      ><div id="video-call"/></body>
+    </html>
+  

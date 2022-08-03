@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="video" transform="translate(13023 12339)">
+    <rect id="Rectangle_237" data-name="Rectangle 237" width="30" height="30" rx="10" transform="translate(-13023 -12339)" fill="#245bc2"/>
+    <g id="Icon_feather-video" data-name="Icon feather-video" transform="translate(-13016.5 -12336.5)">
+      <path id="Path_30676" data-name="Path 30676" d="M28.692,10.5,24,13.852,28.692,17.2Z" transform="translate(-12.445 -1.659)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Path_30677" data-name="Path 30677" d="M2.841,7.5h7.374a1.341,1.341,0,0,1,1.341,1.341v6.7a1.341,1.341,0,0,1-1.341,1.341H2.841A1.341,1.341,0,0,1,1.5,15.544v-6.7A1.341,1.341,0,0,1,2.841,7.5Z" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
